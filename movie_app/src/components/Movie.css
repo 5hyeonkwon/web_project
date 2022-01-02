@@ -1,0 +1,140 @@
+.movies .movie {
+
+  margin-bottom: 70px;
+  font-weight: 300;
+  padding: 20px;
+  border-radius: 5px;
+  color: #adaeb9;
+  
+}
+.movie{
+  display: flex;
+  align-items: flex-start;
+  top:-20px;
+  width : 512px;
+  height :670px;
+  overflow: hidden;
+}
+
+.movies .movie a {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  text-decoration: none;
+  color: inherit;
+}
+
+.movie img {
+  top: 250px;
+  display: flex;
+  position: absolute;
+  height: 675px;
+  width: 512px;
+  
+  /* position: relative;
+  top: -50px;
+  max-width: 150px;
+  width: 100%;
+  margin-right: 30px;
+  box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
+    0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025); */
+}
+.movie__total{
+  display: inline;
+  top : 200px;
+  width: 520px;
+  height: 300px;
+}
+
+.movie .movie__title{
+  color: white;
+  text-align: left;
+  line-height: 70px; 
+  position: relative;
+  background-size:600px 100px;
+  margin: 0;
+  font-size: 24px;
+  
+  
+}
+
+.movie .movie__genres {
+  color: #ffffff;
+  list-style: none;
+  text-align: left;
+  display: flex;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  
+  /*margin: 5px 0px;
+*/}
+.movie__genres li {
+  margin-right: 10px;
+  font-size: 15px;
+}
+.movie__head {
+  background-color: rgba(0,0,0,0.5);
+  
+  text-align: left;
+  position: relative;
+  top : 200px;
+}
+.movie__data {
+ 
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  position: relative;
+  background-color: rgb(0, 0, 0);
+  color: #ffffff;
+  text-align: left;
+  top : 200px;
+  max-width: 511.99px;
+  max-height: 330px;
+  overflow: visible;
+
+
+  
+}
+.info{
+  display: flex;
+  background-color: black;
+  text-align: left;
+  width: 520px;
+  position: relative;
+  color: #ffffff;
+}
+.movie__year{
+  color: #ffffff;
+  position:relative;
+  background-color: rgb(216, 44, 44);
+  top : 200px;
+  width : 100px; 
+}
+.movie__runtime,
+.movie__rating,
+.movie__like {
+  display: flex;
+  flex:1;
+  color: #ffffff;
+  width: 511.99px;
+  height: 300px;
+  font-size: 13px;
+}
+.movie__descript {
+  display: inline;
+  text-align: left;
+  color: #ffffff;
+  position: relative;
+  background-color: black;
+  font-size: 12px;
+  width: 500px;
+  height: 350px;
+
+}
+.movie__runtime span,
+.movie__rating span,
+.movie__like span {
+  font-weight: 800;
+}

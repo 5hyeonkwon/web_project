@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>XMLHttpRequest</title>
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#get').click(function () {
+                $.ajax({                 // 이벤트 처리 함수 
+                    url: '/products',    // http://127.0.0.1:52273/products 에 있는 값들을 가져온다.
+                    type: 'get',
+                    dataType: 'text',
+                    success: function (data) { // 메세지 안의 data를 인자로 받아 success로 실행
+                        $('#output').val(data); // output tag의 text area에 데이터 추가
+                    }
+                });
+            });
+
+            $('#post').click(function () {
+                $.ajax({
+                    url: '/products',
+                    type: 'post',
+                    dataType: 'text',
+                    data: {
+                        name: $('#name').val(), // #name, price 태그에서 문자열을 받아와서 객체를 만듬
+                        price: $('#price').val()
+                    },
+                    success: function (data) {
+                        $('#output').val(data);
+                    }
+                });
+            });
+
+            $('#put').click(function () {
+                $.ajax({
+                    url: '/products/0', //이 부분 수정해야함
+                    type: 'put',
+                    dataType: 'text',
+                    data: {
+                        name: $('#name').val(),
+                        price: $('#price').val()
+                    },
+                    success: function (data) {
+                        $('#output').val(data);
+                    }
+                });
+            });
+
+            $('#delete').click(function () { // 0번 데이터 index가 사라짐
+                $.ajax({
+                    url: '/products/0',
+                    type: 'delete',
+                    dataType: 'text',
+                    success: function (data) {
+                        $('#output').val(data);
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <button id="get">GET</button>
+    <button id="post">POST</button>
+    <button id="put">PUT</button>
+    <button id="delete">DELETE</button>
+    <hr>
+    <h1>input</h1>
+    <input id="name" />
+    <input id="price" />
+    <hr>
+    <h1>output</h1>
+    <textarea id="output" disabled="disabled" cols="40" rows="5"></textarea>
+</body>
+</html>
